@@ -26,8 +26,9 @@ var Main = React.createClass({
       <div className="container">
         <div className="row">
           <div className="jumbotron">
-            <h2 className="text-center">Yes! Same Place</h2>
+            <h1 className="text-center">Yes! Same Place</h1>
           </div>
+          
 
           <div className="col-md-6">
             <Form setTerm={this.setTerm} />
