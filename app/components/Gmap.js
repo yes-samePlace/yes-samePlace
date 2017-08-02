@@ -11,7 +11,7 @@ class Gmap extends React.Component {
 
     componentDidMount() {
         const { lat, lng } = this.props.initialPosition;
-        this.map = new google.maps.Map(this.refs.map, {
+        this.map = new google.maps.Map(this.refs["map"+this.props.id], {
 
             center: {
                 lat,
@@ -27,7 +27,7 @@ class Gmap extends React.Component {
         if (prevProps.searchTerm !== this.props.searchTerm) {
             console.log("UPDATED");
 
-            goapi.runQuery(this.props.searchTerm, this.map).then(function(data) {
+            goapi.runQuery(this.props.searchTerm, this.map, this.props.id).then(function(data) {
                 if (data !== this.props.results) {
                     this.setState({ results: data });
                 }
@@ -43,7 +43,7 @@ class Gmap extends React.Component {
 
     render() {
 
-        return ( <div ref = "map"
+        return ( <div ref = {"map" + this.props.id}
             style = { { width: 400, height: 400, border: '1px solid black' } } />    
         );
     }
