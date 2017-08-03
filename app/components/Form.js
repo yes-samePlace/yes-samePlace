@@ -33,7 +33,7 @@ var Form = React.createClass({
   // Here we describe this component's render method
   render: function() {
     return (
-      <div className="panel panel-default">
+     // <div className="panel panel-default">
         
         <div className="panel-body text-center">
 
@@ -66,7 +66,7 @@ var Form = React.createClass({
             </div>
           </form>
         </div>
-      </div>
+     // </div>
     );
   }
 });

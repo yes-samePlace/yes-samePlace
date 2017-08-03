@@ -30,12 +30,17 @@ var Main = React.createClass({
           </div>
           
 
-          <div className="col-md-6">
+          <div className="col-md-6" id = "con">
             <Form setTerm={this.setTerm} />
           </div>
 
           <div className="col-md-6">
-            <Gmap initialPosition={{lat: 48.858608, lng: 2.294471}} searchTerm={this.state.searchTerm}  />
+            <Gmap initialPosition={{lat: 48.858608, lng: 2.294471}} searchTerm={this.state.searchTerm} id = "0" />
+          </div>
+
+           {/*Charlotte, NC, USA */}
+           <div className="col-md-6" id = "secondMap">
+            <Gmap initialPosition={{lat: 35.227085, lng: -80.843124}} searchTerm={this.state.searchTerm} id = "1"/>
           </div>
         
         </div>
